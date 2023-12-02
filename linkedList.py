@@ -22,6 +22,29 @@ class SinglyLinkedList:
       currentNode.next = new_node
     else:
       self.start = new_node
-  def search(self, item = None):
+  def search(self, data):
+    current_node = self.start
+    if not self.isEmpty():
+      while current_node.next is not None:
+        if current_node.item == data:
+          return data
+        current_node = current_node.next
+      #following return will only run when item is not found
+      return None
+  def insert_after(self, prev_node, data = None):
+    if temp is not None:
+      new_node = Node(data, prev_node.next)
+      prev_node.next = new_node
+  def print_elements(self):
+    if isEmpty():
+      return None
+    current_node = self.start
+    while current_node.next is not None:
+      print(current_node.item, end=' ')
+      current_node = current_node.next
+    
+new_list = SinglyLinkedList(2)
+new_list.print_elements
+    
 
 
